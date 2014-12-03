@@ -1,0 +1,37 @@
+{
+  "name": "Polymer",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "authors": [
+    "Chase Marcum <chase.m.marcum@gmail.com>"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1",
+    "core-ajax": "Polymer/core-ajax#~0.5.1",
+    "core-focusable": "Polymer/core-focusable#~0.5.1",
+    "core-header-panel": "Polymer/core-header-panel#~0.5.1",
+    "core-icon": "Polymer/core-icon#~0.5.1",
+    "core-icon-button": "Polymer/core-icon-button#~0.5.1",
+    "core-icons": "Polymer/core-icons#~0.5.1",
+    "core-iconset": "Polymer/core-iconset#~0.5.1",
+    "core-iconset-svg": "Polymer/core-iconset-svg#~0.5.1",
+    "core-meta": "Polymer/core-meta#~0.5.1",
+    "core-selection": "Polymer/core-selection#~0.5.1",
+    "core-selector": "Polymer/core-selector#~0.5.1",
+    "core-toolbar": "Polymer/core-toolbar#~0.5.1",
+    "font-roboto": "Polymer/font-roboto#~0.5.1",
+    "paper-button": "Polymer/paper-button#~0.5.1",
+    "paper-focusable": "Polymer/paper-focusable#~0.4.2",
+    "paper-icon-button": "Polymer/paper-icon-button#~0.5.1",
+    "paper-ripple": "Polymer/paper-ripple#~0.5.1",
+    "paper-shadow": "Polymer/paper-shadow#~0.5.1",
+    "paper-tabs": "Polymer/paper-tabs#~0.5.1"
+  }
+}
