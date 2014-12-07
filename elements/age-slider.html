@@ -1,6 +1,9 @@
 <link rel="import"
       href="../bower_components/polymer/polymer.html">
 
+<!-- You can use bindings with built-in elements just like you would with Polymer elements. This is a great way
+     to leverage existing APIs to build complex components. The following example demonstrates binding component
+     properties to attributes of native input elements. -->
 <polymer-element name="age-slider">
     <template>
         This is <b>{{owner}}</b>'s age-slider.
@@ -20,6 +23,9 @@
                     name: "Chase",
                     color: "Blue",
                     owner: "Kindra",
+
+//                  In this example, nameChanged() defines a property changed watcher. Polymer will then call this
+//                  method any time the name property is updated. Read more about changed watchers.
                     nameChanged: function () {
                         if (this.name) {
                             // Ensure name is capitalized

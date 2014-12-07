@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <title>Polymer Example</title>
 
-    <!-- 1. Load platform support before any code that touches the DOM. -->
+    /**
+    * The 3 key components needed to create a Polymer app.
+    *
+    * 1. Load the platform support before any code that touches the DOM.
+    * 2. Load the Polymer component by using an HTML Import
+    * 3. Declare the Polymer element by its tag.
+    */
+
+
+    // 1. Load the platform support before any code that touches the DOM.
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 
-    <!-- 2. Load the component using an HTML Import -->
+    // 2. Load the Polymer component by using an HTML Import
     <link rel="import" href="elements/my-element.html">
     <link rel="import" href="elements/proto-element.html">
     <link rel="import" href="elements/ready-element.html">
@@ -19,11 +28,14 @@
 
 </head>
 <body>
-    <!-- 3. Declare the element by its tag. -->
+    <!-- 3. Declare the Polymer element by its tag. -->
     <h1>Polymer</h1>
+
     <article>
         <h3>A Polymer element</h3>
 
+        <!-- The name attribute is required and must contain a “-“. It specifies the name of the HTML tag you’ll
+            instantiate in markup (in this case <my-element>). -->
         <my-element></my-element>
 
         <br/>

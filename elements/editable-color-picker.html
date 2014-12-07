@@ -1,6 +1,12 @@
 <link rel="import"
       href="../bower_components/polymer/polymer.html">
 
+<!-- The use of the id attribute has traditionally been discouraged as an anti-pattern because the document
+     requires element IDs to be unique. Shadow DOM, on the other hand, is a self-contained document-like
+     subtree; IDs in that subtree do not interact with IDs in other trees. This means the use of IDs in
+     Shadow DOM is not only permissible, it’s actually encouraged. Each Polymer element generates a map
+     of IDs to node references in the element’s template. This map is accessible as $ on the element and
+     can be used to quickly select the node you wish to work with. -->
 <polymer-element name="editable-color-picker" attributes="owner color">
     <template>
         <p>

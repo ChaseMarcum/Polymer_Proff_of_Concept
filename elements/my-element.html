@@ -1,6 +1,12 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- include an import that loads the new dependency -->
 <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
 
+<!-- The name attribute is required and must contain a “-“. It specifies the name of the HTML tag you’ll
+     instantiate in markup (in this case <my-element>). -->
+
+<!-- The noscript attribute indicates that this is a simple element that doesn’t include any script.
+     An element declared with noscript is registered automatically. -->
 <polymer-element name="my-element" noscript>
     <template>
         <span>I'm <b>my-element</b>. This is my Shadow DOM.</span>

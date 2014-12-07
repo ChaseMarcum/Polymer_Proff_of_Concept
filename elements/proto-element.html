@@ -4,6 +4,12 @@
     <template>
         <span>I'm <b>proto-element</b>. Check out my prototype.</span>
     </template>
+
+    <!-- When you’re creating a new element, you’ll often need to expose a public API so users can configure it.
+         To define a public API, include a <script> tag that calls the Polymer(...) constructor. The Polymer(...)
+         constructor is a convenience wrapper for document.registerElement, but also endows the element with
+         special features like data binding and event mapping. The Polymer constructor takes as an argument
+         an object that defines your element’s prototype.-->
     <script>
         Polymer({
                     ready: function () {

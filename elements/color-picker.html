@@ -1,6 +1,15 @@
 <link rel="import"
       href="../bower_components/polymer/polymer.html">
 
+<!-- Published properties can be used to define an element’s “public API”. Polymer establishes two-way data
+     binding for published properties and provides access to the property’s value using {{}}. -->
+
+<!-- Publish a property by listing it in the attributes attribute in your <polymer-element>. Properties declared
+     this way are initially null. To provide a more appropriate default value, include the same property name
+     directly in your prototype. -->
+
+<!-- The following example defines two data-bound properties on the element, owner and color, and gives them
+     default values: -->
 <polymer-element name="color-picker"
                  attributes="owner color">
     <template>
