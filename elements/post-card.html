@@ -35,6 +35,16 @@
                 border-radius: 50%;
                 margin: 10px;
             }
+            core-icon-button {
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                color: #636363;
+            }
+            :host([favorite]) core-icon-button {
+                color: #da4336;
+            }
+
         </style>
 
         <!-- The three <content> elements create insertion points. -->
@@ -42,11 +52,29 @@
             <content select="img"></content>
             <content select="h2"></content>
         </div>
+
+        <core-icon-button
+                id="favicon"
+                icon="favorite"
+                on-tap="{{favoriteTapped}}">
+        </core-icon-button>
+
         <content></content>
     </template>
 
     <!-- The Polymer call at the end of the file registers the element so it's recognized by the browse -->
     <script>
-        Polymer({});
+        Polymer({
+            publish: {
+                favorite: {
+                    value: false,
+                    reflect: true
+                }
+            },
+            favoriteTapped: function(event, detail, sender) {
+                this.favorite = !this.favorite;
+                this.fire('favorite-tap');
+            }
+        });
     </script>
 </polymer-element>

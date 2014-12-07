@@ -26,7 +26,11 @@
 
             <!-- tells the template to create a new instance for each item in the posts array -->
             <template repeat="{{post in posts}}">
-                <post-card>
+
+                <post-card
+                        favorite="{{post.favorite}}"
+                        on-favorite-tap="{{handleFavorite}}"
+                        hidden?="{{show == 'favorites' && !post.favorite}}">
                     <img src="{{post.avatar}}" width="70" height="70">
                     <h2>{{post.username}}</h2>
                     <p>{{post.text}}</p>
@@ -38,6 +42,11 @@
 
     <!-- The Polymer call at the end of the file registers the element so it's recognized by the browse -->
     <script>
-        Polymer({});
+        Polymer({
+            handleFavorite: function(event, detail, sender) {
+                var post = sender.templateInstance.model.post;
+                this.$.service.setFavorite(post.uid, post.favorite);
+            }
+        });
     </script>
 </polymer-element>
